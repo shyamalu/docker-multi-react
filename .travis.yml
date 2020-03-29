@@ -6,5 +6,5 @@ before_install:
   - docker build -t shaymal/docker-multi-react -f Dockerfile.dev .
 
 script:
-  - docker -e CI=true shaymal/docker-multi-react npm run test -- --coverage
+  - docker run -e CI=true shaymal/docker-multi-react npm run test -- --coverage
 
